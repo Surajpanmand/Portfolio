@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Shivaji Panmand Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; 
+        }
+        .font-liberation-serif {
+            font-family: "Liberation Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #6D28D9, #C084FC);   
+        }
+      
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;   
+            scrollbar-width: none;   
+        }
+
+        .card-glow-hover {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            transform: translateZ(0);  
+        }
+        .card-glow-hover:before {
+            content: '';
+            position: absolute;
+            inset: -1px;  
+            border-radius: 14px;  
+            padding: 1px;
+            background: linear-gradient(90deg, #8B5CF6, #C084FC, #8B5CF6);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude; 
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 0;
+        }
+        .card-glow-hover:hover {
+            transform: translateY(-4px) scale(1.01);  
+            box-shadow: 0 10px 15px -3px rgba(126, 34, 206, 0.5), 0 4px 6px -2px rgba(126, 34, 206, 0.5);  
+        }
+        .card-glow-hover:hover:before {
+            opacity: 1;
+        }
+        .card-content {
+            position: relative;
+            z-index: 10;
+            background-color: #1f2937;  
+            border-radius: 12px;
+            padding: 1.5rem;
+            height: 100%;  
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen">
+
+    <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md shadow-2xl shadow-indigo-900/20 border-b border-gray-800">
+        <nav class="container mx-auto max-w-4xl p-4 flex justify-center space-x-4 sm:space-x-6 text-sm sm:text-base font-liberation-serif">
+            <a href="#home" class="hover:text-purple-400 transition duration-300 transform hover:scale-105">Home</a>
+            <a href="#about" class="hover:text-purple-400 transition duration-300 transform hover:scale-105">About</a>
+            <a href="#projects" class="hover:text-purple-400 transition duration-300 transform hover:scale-105">Projects</a>
+            <a href="#certifications" class="hover:text-purple-400 transition duration-300 transform hover:scale-105">Certifications</a>
+            <a href="#contact" class="hover:text-purple-400 transition duration-300 transform hover:scale-105">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container mx-auto p-4 sm:p-8 max-w-4xl pt-12 sm:pt-16">
+
+        <section id="home" class="text-center min-h-[60vh] flex flex-col justify-center items-center py-16 sm:py-20 relative overflow-hidden">
+            <div class="absolute w-64 h-64 bg-indigo-600 rounded-full opacity-10 blur-3xl -top-10 -left-10 animate-pulse"></div>
+            <div class="absolute w-80 h-80 bg-purple-600 rounded-full opacity-10 blur-3xl -bottom-10 -right-10 animate-pulse-slow"></div>
+
+            <img 
+                src= "https://avatars.githubusercontent.com/u/213504923?v=4"
+                alt="Suraj Panmand Profile" 
+                class="w-32 h-32 rounded-full mb-6 border-0 border-purple-600 object-cover shadow-2xl z-10"
+                onerror="this.onerror=null; this.src='https://placehold.co/128x128/9D174D/FFFFFF/png?text=SP';"
+            >
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 z-10 font-liberation-serif text-center z-10">
+                Hello, I'm
+            </h1>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-gradient mb-4 z-10 font-liberation-serif text-center z-10">
+                Suraj Shivaji Panmand
+            </h2>
+            <p class="mt-6 text-base md:text-lg font-light text-gray-300 max-w-2xl sm:max-w-3xl leading-relaxed font-liberation-serif text-center z-10">
+                Full-Stack Developer, Software Developer, and Data Analysis.
+            </p>
+            <a href="#projects" class="mt-10 px-8 py-3 bg-indigo-600 rounded-full text-white font-bold hover:bg-indigo-500 transition duration-300 shadow-xl shadow-indigo-600/50 text-lg transform hover:scale-105 z-10">
+                View My Work
+            </a>
+        </section>
+       
+        <section id="about" class="py-16 sm:py-20 border-t border-gray-800">
+            <h2 class="text-3xl font-liberation-serif text-center mb-10 text-gradient ">
+                About Me
+            </h2>
+            <div class="space-y-6 text-base text-gray-300 leading-relaxed max-w-3xl mx-auto font-liberation-serif text-justify z-10">
+                <p>
+                    Aspiring Software Developer with strong foundation in programming, problem-solving, and full-stack
+                    development. Skilled in multiple programming languages, databases, and frameworks with hands-on
+                    experience through academic and like industrial projects, seeking an opportunity to apply technical
+                    expertise to build scalable and impactful software solutions.
+                </p>
+                
+                <div class="pt-8">
+                    <h3 class="text-xl font-bold mb-4 text-purple-400 border-b border-gray-800 pb-2">Education</h3>
+                    
+                    <div class="card-glow-hover bg-gray-900 rounded-xl shadow-lg mb-4 p-0">
+                        <div class="card-content bg-gray-900 border border-gray-800 hover:border-indigo-600 transition duration-300">
+                            <p class="font-extrabold text-lg text-white">Bachelor of Computer Applications (BCA)</p>
+                            <p class="text-indigo-400 text-sm">Dr D.Y Patil Arts, Commerce, Science Pimpri Pune - 18.</p>
+                            <p class="text-sm text-gray-400">Affiliated with Savitribai Phule University.</p>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-2">
+                                <span class="text-xs font-medium text-gray-400">Completed : 2025</span>
+                                <span class="text-sm font-bold text-green-400 mt-1 sm:mt-0">Percentage: 63.27%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-glow-hover bg-gray-900 rounded-xl shadow-lg mb-4 p-0">
+                        <div class="card-content bg-gray-900 border border-gray-800 hover:border-indigo-600 transition duration-300">
+                            <p class="font-extrabold text-lg text-white">Higher Secondary Certificate (HSC)</p>
+                            <p class="text-indigo-400 text-sm">Dr D.Y Patil Arts, Commerce, Science Pimpri Pune - 18.</p>
+                            <p class="text-sm text-gray-400">Affiliated with Savitribai Phule University.</p>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-2">
+                                <span class="text-xs font-medium text-gray-400">Completed : 2022</span>
+                                <span class="text-sm font-bold text-green-400 mt-1 sm:mt-0">Percentage: 64.18%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+
+                <div class="pt-10">
+                    <h3 class="text-xl font-liberation-serif mb-5 text-purple-400 border-b border-gray-800 pb-2">Core Competencies</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-bold text-lg text-white mb-3">Languages</p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-1.5 bg-indigo-600 text-sm font-semibold rounded-full shadow-lg transition duration-300 hover:bg-indigo-500">C</span>
+                                <span class="px-4 py-1.5 bg-indigo-600 text-sm font-semibold rounded-full shadow-lg transition duration-300 hover:bg-indigo-500">C++</span>
+                                <span class="px-4 py-1.5 bg-indigo-600 text-sm font-semibold rounded-full shadow-lg transition duration-300 hover:bg-indigo-500">Java</span>
+                                <span class="px-4 py-1.5 bg-indigo-600 text-sm font-semibold rounded-full shadow-lg transition duration-300 hover:bg-indigo-500">Python</span>
+                                <span class="px-4 py-1.5 bg-indigo-600 text-sm font-semibold rounded-full shadow-lg transition duration-300 hover:bg-indigo-500">JavaScript</span>
+                                <span class="px-4 py-1.5 bg-indigo-600 text-sm font-semibold rounded-full shadow-lg transition duration-300 hover:bg-indigo-500">HTML</span>
+                                <span class="px-4 py-1.5 bg-indigo-600 text-sm font-semibold rounded-full shadow-lg transition duration-300 hover:bg-indigo-500">CSS</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="font-bold text-lg text-white mb-3">Frameworks & Libraries</p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-1.5 bg-emerald-600 text-sm font-semibold rounded-full shadow-lg transition duration-300 hover:bg-emerald-500">Spring Boot</span>
+                                <span class="px-4 py-1.5 bg-yellow-600 text-sm font-semibold rounded-full shadow-lg transition duration-300 hover:bg-yellow-500">Hibernate (Learning)</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="font-bold text-lg text-white mb-3">Databases</p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-1.5 bg-red-600 text-sm font-semibold rounded-full shadow-lg transition duration-300 hover:bg-red-500">MySQL</span>
+                                <span class="px-4 py-1.5 bg-red-600 text-sm font-semibold rounded-full shadow-lg transition duration-300 hover:bg-red-500">SQL (Oracle)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-16 sm:py-20 border-t border-gray-800">
+            <h2 class="text-3xl font-liberation-serif text-center mb-10 text-gradient">Showcase of Projects</h2>
+
+            <div class="relative max-w-4xl mx-auto">
+
+                <button id="prev-project" class="absolute left-0 top-1/2 -translate-y-1/2 z-30 p-3 bg-gray-700/80 rounded-full shadow-xl hover:bg-indigo-600 transition duration-300 hidden md:block text-white backdrop-blur-sm -ml-4 ring-2 ring-indigo-500/50">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+
+                <div id="project-scroller" class="flex space-x-4 sm:space-x-6 overflow-x-scroll pb-4 snap-x snap-mandatory hide-scrollbar">
+                
+                    <div class="card-glow-hover flex-shrink-0 snap-center w-11/12 md:w-1/2 lg:w-1/3 p-0">
+                        <div class="card-content bg-gray-900 border border-gray-800">
+                            <div class="flex-grow">
+                                <div class="flex flex-wrap gap-2 mb-3">
+                                    <span class="px-3 py-1 bg-blue-600 text-xs font-semibold rounded-full">C++</span>
+                                    <span class="px-3 py-1 bg-fuchsia-600 text-xs font-semibold rounded-full">OS Internals</span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-liberation-serif text-indigo-400 mb-3">Customized Virtual File System (CVFS)</h3>
+                                <p class="text-gray-300 text-sm mb-4">
+                                    A simulated Linux-like file system, complete with a custom command shell, demonstrating deep knowledge of OS internals and core data structures.
+                                </p>
+                                <h4 class="text-sm font-liberation-serif text-white mb-2">Key Implementations:</h4>
+                                <ul class="list-disc list-inside text-gray-400 text-xs sm:text-sm space-y-1 pl-4">
+                                    <li>Simulated Linux-like file system operation with a custom shell.</li>
+                                    <li>Implemented stack, queues, linked list, and BST.</li>
+                                </ul>
+                            </div>
+                            <div class="pt-4 border-t border-gray-700 mt-4">
+                                <a href="https://github.com/Surajpanmand/Customized-Virtual-File-System-CVFS-" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-bold text-purple-400 hover:text-purple-300 transition duration-300">
+                                    View GitHub Repository
+                                    <i data-lucide="arrow-right" class="h-4 w-4 ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-glow-hover flex-shrink-0 snap-center w-11/12 md:w-1/2 lg:w-1/3 p-0">
+                        <div class="card-content bg-gray-900 border border-gray-800">
+                            <div class="flex-grow">
+                                <div class="flex flex-wrap gap-2 mb-3">
+                                    <span class="px-3 py-1 bg-orange-600 text-xs font-semibold rounded-full">Java</span>
+                                    <span class="px-3 py-1 bg-yellow-600 text-xs font-semibold rounded-full">Collections</span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-liberation-serif text-indigo-400 mb-3">Marvellous Study Tracker App</h3>
+                                <p class="text-gray-300 text-sm mb-4">
+                                    A robust, console-based application designed to log, summarize, and manage user study activities using core Java concepts.
+                                </p>
+                                <h4 class="text-sm font-liberation-serif text-white mb-2">Key Implementations:</h4>
+                                <ul class="list-disc list-inside text-gray-400 text-xs sm:text-sm space-y-1 pl-4">
+                                    <li>Console-based tracker to log and summarize study activities.</li>
+                                    <li>Applied Collections (ArrayList, TreeMap) and OOP principles.</li>
+                                </ul>
+                            </div>
+                            <div class="pt-4 border-t border-gray-700 mt-4">
+                                <a href="https://github.com/Surajpanmand/StudyTracker" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-bold text-purple-400 hover:text-purple-300 transition duration-300">
+                                    View GitHub Repository
+                                    <i data-lucide="arrow-right" class="h-4 w-4 ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-glow-hover flex-shrink-0 snap-center w-11/12 md:w-1/2 lg:w-1/3 p-0">
+                        <div class="card-content bg-gray-900 border border-gray-800">
+                            <div class="flex-grow">
+                                <div class="flex flex-wrap gap-2 mb-3">
+                                    <span class="px-3 py-1 bg-orange-600 text-xs font-semibold rounded-full">Java</span>
+                                    <span class="px-3 py-1 bg-pink-600 text-xs font-semibold rounded-full">Encryption/Security</span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-liberation-serif text-indigo-400 mb-3">File Packer & Unpacker with Encryption</h3>
+                                <p class="text-gray-300 text-sm mb-4">
+                                    A secure utility to archive and manage files, featuring robust encryption to protect packaged data.
+                                </p>
+                                <h4 class="text-sm font-liberation-serif text-white mb-2">Key Implementations:</h4>
+                                <ul class="list-disc list-inside text-gray-400 text-xs sm:text-sm space-y-1 pl-4">
+                                    <li>Built a file archiving utility with integrated encryption/decryption.</li>
+                                    <li>Implemented metadata preservation during packing/unpacking.</li>
+                                </ul>
+                            </div>
+                            <div class="pt-4 border-t border-gray-700 mt-4">
+                                <a href="https://github.com/Surajpanmand/File-Packer-Unpacker-with-Encryption" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-bold text-purple-400 hover:text-purple-300 transition duration-300">
+                                    View GitHub Repository
+                                    <i data-lucide="arrow-right" class="h-4 w-4 ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-glow-hover flex-shrink-0 snap-center w-11/12 md:w-1/2 lg:w-1/3 p-0">
+                        <div class="card-content bg-gray-900 border border-gray-800">
+                            <div class="flex-grow">
+                                <div class="flex flex-wrap gap-2 mb-3">
+                                    <span class="px-3 py-1 bg-blue-600 text-xs font-semibold rounded-full">C / Win32 SDK</span>
+                                    <span class="px-3 py-1 bg-red-600 text-xs font-semibold rounded-full">Cryptography</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-indigo-400 mb-3">Secure File Transfer Simulation</h3>
+                                <p class="text-gray-300 text-sm mb-4">
+                                    A utility demonstrating secure file handling using low-level Windows APIs and symmetric encryption algorithms.
+                                </p>
+                                <h4 class="text-sm font-bold text-white mb-2">Key Implementations:</h4>
+                                <ul class="list-disc list-inside text-gray-400 text-xs space-y-1 pl-4">
+                                    <li>Implemented Caesar & XOR cipher for encryption/decryption.</li>
+                                    <li>Packaged core logic into a DLL for modular functionality.</li>
+                                </ul>
+                            </div>
+                            <div class="pt-4 border-t border-gray-700 mt-4">
+                                <a href="https://github.com/Surajpanmand/Customized-Virtual-File-System-CVFS-" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-bold text-purple-400 hover:text-purple-300 transition duration-300">
+                                    View GitHub Repository
+                                    <i data-lucide="arrow-right" class="h-4 w-4 ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="next-project" class="absolute right-0 top-1/2 -translate-y-1/2 z-30 p-3 bg-gray-700/80 rounded-full shadow-xl hover:bg-indigo-600 transition duration-300 hidden md:block text-white backdrop-blur-sm -mr-4 ring-2 ring-indigo-500/50">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+        <section id="certifications" class="py-16 sm:py-20 border-t border-gray-800">
+            <h2 class="text-3xl font-liberation-serif text-center mb-10 text-gradient">Certifications & Courses</h2>
+            
+            <div class="relative max-w-4xl mx-auto">
+
+                <button id="prev-cert" class="absolute left-0 top-1/2 -translate-y-1/2 z-30 p-3 bg-gray-700/80 rounded-full shadow-xl hover:bg-indigo-600 transition duration-300 hidden md:block text-white backdrop-blur-sm -ml-4 ring-2 ring-indigo-500/50">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+                
+                <div id="cert-scroller" class="flex space-x-4 sm:space-x-6 overflow-x-scroll pb-4 snap-x snap-mandatory hide-scrollbar mt-8 items-stretch">
+                
+                    <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_68f04eb5d10117b24efdbd40_1761833448804_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="card-glow-hover flex-shrink-0 snap-center w-11/12 md:w-1/2 lg:w-1/3 p-0 h-full">
+                        <div class="card-content bg-gray-900 border border-gray-800 h-full">
+                            <div class="deloitte-bg absolute inset-0 z-0"></div>
+                            <div class="relative z-10 h-full flex flex-col justify-between">
+                                <div class="mb-4">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <p class="text-xs font-bold uppercase tracking-wider text-purple-400">Deloitte / Forage</p>
+                                        <i data-lucide="external-link" class="h-5 w-5 text-indigo-400"></i>
+                                    </div>
+                                    <h3 class="text-lg sm:text-xl font-extrabold text-white leading-snug">Deloitte Australia - Data Analytics Job Simulation</h3>
+                                    <p class="mt-2 text-xs sm:text-sm text-gray-400">Awarded for completing the virtual simulation focusing on data visualization, analysis, and strategic recommendations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+
+                    <a href="https://www.linkedin.com/learning/certificates/b829ad70c996d563bc5ada8fd660f7d1f7b9d864f067026256e4585ad1f0d1c8" target="_blank" rel="noopener noreferrer" class="card-glow-hover flex-shrink-0 snap-center w-11/12 md:w-1/2 lg:w-1/3 p-0 h-full">
+                        <div class="card-content bg-gray-900 border border-gray-800 h-full">
+                            <div class="relative z-10 h-full flex flex-col justify-between"> 
+                                <div class="mb-4">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <p class="text-xs font-bold uppercase tracking-wider text-purple-400">Microsoft / LinkedIn</p>
+                                        <i data-lucide="external-link" class="h-5 w-5 text-indigo-400"></i>
+                                    </div>
+                                    <h3 class="text-lg sm:text-xl font-extrabold text-white leading-snug">Build Your Generative AI Productivity Skills</h3>
+                                    <p class="mt-2 text-xs sm:text-sm text-gray-400">A joint certification of Generative AI tools and concepts to boost software development and data analysis productivity.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_68f04eb5d10117b24efdbd40_1760800809747_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="card-glow-hover flex-shrink-0 snap-center w-11/12 md:w-1/2 lg:w-1/3 p-0 h-full">
+                        <div class="card-content bg-gray-900 border border-gray-800 h-full">
+                            <div class="deloitte-bg absolute inset-0 z-0"></div>
+                            <div class="relative z-10 h-full flex flex-col justify-between">  
+                                <div class="mb-4">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <p class="text-xs font-bold uppercase tracking-wider text-purple-400">Deloitte</p>
+                                          
+                                        <i data-lucide="external-link" class="h-5 w-5 text-indigo-400"></i>
+                                    </div>
+                                    <h3 class="text-lg sm:text-xl font-extrabold text-white leading-snug">Deloitte Australia - Technology Job Simulation</h3>
+                                    <p class="mt-2 text-xs sm:text-sm text-gray-400">Awarded for successfully completing the virtual job simulation and program covering key technology challenges.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+ 
+                 <button id="next-cert" class="absolute right-0 top-1/2 -translate-y-1/2 z-30 p-3 bg-gray-700/80 rounded-full shadow-xl hover:bg-indigo-600 transition duration-300 hidden md:block text-white backdrop-blur-sm -mr-4 ring-2 ring-indigo-500/50">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+
+            </div>
+         </section>
+         
+         <section id="contact" class="py-16 sm:py-20 border-t border-gray-800">
+            <h2 class="text-3xl font-liberation-serif text-center mb-4 text-gradient">Let's Connect</h2>
+            <p class="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
+                
+            </p>
+
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 max-w-4xl mx-auto">
+
+                 <div class="card-glow-hover p-0 h-full">
+                    <div class="card-content bg-gray-900 border border-gray-800 p-6 sm:p-8 h-full">
+                        <h3 class="text-lg sm:text-xl font-extrabold text-white mb-6">Send Me a Message</h3>
+                        
+                        <form id="contact-form" class="space-y-4">
+                             <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 placeholder-gray-500">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Your Email</label>
+                                <input type="email" id="email" name="email" required placeholder="email@example.com" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 placeholder-gray-500">
+                            </div>
+                        
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-300 mb-1">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Hiring opportunity or project inquiry" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 placeholder-gray-500">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project or role..." class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-indigo-500 focus:border-indigo-500 transition duration-300 placeholder-gray-500"></textarea>
+                            </div>
+                            
+                            <div>
+                                <button type="submit" id="submit-button" class="w-full px-8 py-3 bg-indigo-600 rounded-lg text-white font-bold hover:bg-indigo-500 transition duration-300 shadow-xl shadow-indigo-600/50 text-lg transform hover:scale-105 z-10">
+                                    Send Message
+                                </button>
+                            </div>
+                            
+                            <p id="form-status" class="text-sm mt-4 text-center h-4">&nbsp;</p>
+                        </form>
+                    </div>
+                </div>
+
+                 <div class="space-y-6">
+                    <h3 class="text-lg sm:text-xl font-extrabold text-white mb-6">Direct Links</h3>
+                    
+                     <a href="mailto:surajpanmand01@gmail.com" class="card-glow-hover block p-0">
+                        <div class="card-content bg-gray-900 border border-gray-800 p-5 flex items-center space-x-4">
+                            <i data-lucide="mail" class="w-8 h-8 text-indigo-400"></i>
+                            <div>
+                                <p class="text-base sm:text-lg font-semibold text-white">Email</p>
+                                <p class="text-xs sm:text-sm text-gray-400">surajpanmand01@gmail.com</p>
+                            </div>
+                        </div>
+                    </a>
+
+                     <a href="tel:+918482802407" class="card-glow-hover block p-0">
+                         <div class="card-content bg-gray-900 border border-gray-800 p-5 flex items-center space-x-4">
+                            <i data-lucide="phone" class="w-8 h-8 text-indigo-400"></i>
+                            <div>
+                                <p class="text-base sm:text-lg font-semibold text-white">Phone</p>
+                                <p class="text-xs sm:text-sm text-gray-400">+91 84828 02407</p>
+                            </div>
+                        </div>
+                    </a>
+
+                     <a href="https://www.linkedin.com/in/suraj-panmand-706810309" target="_blank" rel="noopener noreferrer" class="card-glow-hover block p-0">
+                        <div class="card-content bg-gray-900 border border-gray-800 p-5 flex items-center space-x-4">
+                            <i data-lucide="linkedin" class="w-8 h-8 text-indigo-400"></i>
+                            <div>
+                                <p class="text-base sm:text-lg font-semibold text-white">LinkedIn</p>
+                                <p class="text-xs sm:text-sm text-gray-400">https://www.linkedin.com/in/suraj-panmand-706810309</p>
+                            </div>
+                        </div>
+                    </a>
+
+                     <a href="https://github.com/Surajpanmand" target="_blank" rel="noopener noreferrer" class="card-glow-hover block p-0">
+                        <div class="card-content bg-gray-900 border border-gray-800 p-5 flex items-center space-x-4">
+                            <i data-lucide="github" class="w-8 h-8 text-indigo-400"></i>
+                            <div>
+                                <p class="text-base sm:text-lg font-semibold text-white">GitHub</p>
+                                <p class="text-xs sm:text-sm text-gray-400">github.com/Surajpanmand</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+ 
+    </div>
+ 
+     <footer class="border-t border-gray-800 mt-16">
+        <div class="container mx-auto max-w-4xl p-6 sm:p-8 text-center text-gray-500 text-sm">
+            &copy; Designed by Suraj Shivaji Panmand.
+        </div>
+    </footer>
+
+
+     <script type="module">
+         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+         import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+         import { getFirestore, collection, addDoc, serverTimestamp, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+         const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-portfolio';
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        let db, auth;
+
+         document.addEventListener('DOMContentLoaded', () => {
+            
+              if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                console.warn('Lucide icons script not loaded.');
+            }
+
+             try {
+                if (Object.keys(firebaseConfig).length > 0) {
+                    const app = initializeApp(firebaseConfig);
+                    auth = getAuth(app);
+                    db = getFirestore(app);
+                    setLogLevel('Debug');  
+                    authenticateUser();
+                } else {
+                    console.warn("Firebase config is empty. Form submission will be disabled.");
+                    disableForm("Contact form is currently unavailable.");
+                }
+            } catch (e) {
+                console.error("Firebase initialization failed:", e);
+                 disableForm("Firebase failed to load. Please try again later.");
+            }
+
+             setupScroller('prev-project', 'next-project', 'project-scroller');
+            setupScroller('prev-cert', 'next-cert', 'cert-scroller');
+
+             setupContactForm();
+        });
+
+         async function authenticateUser() {
+            try {
+                if (!auth) return;
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                    console.log("Authenticated with custom token.");
+                } else {
+                    await signInAnonymously(auth);
+                    console.log("Authenticated anonymously.");
+                }
+            } catch (error) {
+                console.error("Authentication error:", error);
+                disableForm("Authentication error. Cannot send message.");
+            }
+        }
+
+         function setupScroller(prevButtonId, nextButtonId, scrollerId) {
+            const prevButton = document.getElementById(prevButtonId);
+            const nextButton = document.getElementById(nextButtonId);
+            const scroller = document.getElementById(scrollerId);
+
+            if (!prevButton || !nextButton || !scroller) return;
+
+             const getScrollAmount = () => {
+                 const firstChild = scroller.querySelector('.card-glow-hover');
+                if (firstChild) {
+                    const style = window.getComputedStyle(scroller);
+                    const gap = parseFloat(style.gap) || 24;  
+                    return firstChild.offsetWidth + gap;
+                }
+                return 300;  
+            };
+
+            prevButton.addEventListener('click', () => {
+                scroller.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+            });
+
+            nextButton.addEventListener('click', () => {
+                scroller.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+            });
+        }
+
+         function setupContactForm() {
+            const form = document.getElementById('contact-form');
+            const submitButton = document.getElementById('submit-button');
+            const formStatus = document.getElementById('form-status');
+
+            if (!form || !submitButton || !formStatus) return;
+
+             if (submitButton.disabled) return;
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                if (!db || !auth.currentUser) {
+                    formStatus.textContent = "Database not connected. Please refresh.";
+                    formStatus.className = "text-sm mt-4 text-center text-red-500";
+                    return;
+                }
+
+                 submitButton.disabled = true;
+                submitButton.textContent = "Sending...";
+                submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+                formStatus.textContent = "";
+                formStatus.className = "text-sm mt-4 text-center text-gray-400";
+
+
+                try {
+                     const formData = new FormData(form);
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    const subject = formData.get('subject');
+                    const message = formData.get('message');
+
+                      const messagesCollectionPath = `artifacts/${appId}/public/data/contactMessages`;
+                    
+                     await addDoc(collection(db, messagesCollectionPath), {
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message,
+                        createdAt: serverTimestamp(),
+                        read: false  
+                    });
+
+                     formStatus.textContent = "Message sent successfully! Thank you.";
+                    formStatus.className = "text-sm mt-4 text-center text-green-500";
+                    form.reset();
+
+                } catch (error) {
+                    console.error("Error adding document: ", error);
+                    formStatus.textContent = "Error sending message. Please try again.";
+                    formStatus.className = "text-sm mt-4 text-center text-red-500";
+                } finally {
+                     submitButton.disabled = false;
+                    submitButton.textContent = "Send Message";
+                    submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                }
+            });
+        }
+
+         function disableForm(message) {
+            const form = document.getElementById('contact-form');
+            const submitButton = document.getElementById('submit-button');
+            const formStatus = document.getElementById('form-status');
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = "Unavailable";
+                submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+            }
+            if (formStatus) {
+                formStatus.textContent = message;
+                formStatus.className = "text-sm mt-4 text-center text-red-500";
+            }
+            if(form) {
+                form.querySelectorAll('input, textarea').forEach(el => el.disabled = true);
+            }
+        }
+
+    </script>
+</body>
+</html>
